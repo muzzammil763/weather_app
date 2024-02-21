@@ -1,9 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:weather_app/Widgets/additional_information.dart';
 import 'package:weather_app/Widgets/current_weather.dart';
+import 'package:weather_app/Services/weather_api.dart';
 
-class HomePageScreen extends StatelessWidget {
+class HomePageScreen extends StatefulWidget {
   const HomePageScreen({super.key});
+
+  @override
+  State<HomePageScreen> createState() => _HomePageScreenState();
+}
+
+class _HomePageScreenState extends State<HomePageScreen> {
+  WeatherApi client = WeatherApi();
+  @override
+  void initState() {
+    super.initState();
+    client.getCurrentWeather('lahore');
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -15,9 +28,7 @@ class HomePageScreen extends StatelessWidget {
             Icons.menu,
             color: Colors.black,
           ),
-          onPressed: () {
-            Navigator.pop(context);
-          },
+          onPressed: () {},
         ),
         centerTitle: true,
         backgroundColor: const Color(0xffffeff6),
