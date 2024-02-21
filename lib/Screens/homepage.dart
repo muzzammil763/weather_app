@@ -12,6 +12,7 @@ class HomePageScreen extends StatelessWidget {
           'Homepage',
           style: TextStyle(
             fontSize: 18,
+            fontWeight: FontWeight.bold,
             color: Colors.white,
           ),
         ),
