@@ -15,14 +15,13 @@ Widget currentWeather(IconData icon, String temp, String location) {
         Text(
           temp,
           style: const TextStyle(
-            fontSize: 30,
-            fontWeight: FontWeight.bold,
+            fontSize: 40,
           ),
         ),
         Text(
           location,
           style: const TextStyle(
-            fontSize: 25,
+            fontSize: 20,
           ),
         ),
       ],

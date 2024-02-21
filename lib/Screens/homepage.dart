@@ -31,6 +31,17 @@ class HomePageScreen extends StatelessWidget {
       body: Column(
         children: [
           currentWeather(Icons.wb_sunny, '25.5', 'Lahore'),
+          const SizedBox(height: 12),
+          const Divider(indent: 50, endIndent: 50, thickness: 2),
+          const SizedBox(height: 12),
+          const Text(
+            "Additional Information",
+            style: TextStyle(
+              fontSize: 23,
+            ),
+          ),
+          //Text("Humidity: 70%"),
+          //Text("Wind Speed: 6.5km/h"),
         ],
       ),
     );
