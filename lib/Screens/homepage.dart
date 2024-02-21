@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:weather_app/Widgets/curent_weather.dart';
+import 'package:weather_app/Widgets/current_weather.dart';
 
 class HomePageScreen extends StatelessWidget {
   const HomePageScreen({super.key});
@@ -28,8 +28,10 @@ class HomePageScreen extends StatelessWidget {
           ),
         ),
       ),
-      body: const Column(
-        children: [],
+      body: Column(
+        children: [
+          currentWeather(Icons.wb_sunny, '25.5', 'Lahore'),
+        ],
       ),
     );
   }
