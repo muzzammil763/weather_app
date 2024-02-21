@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:weather_app/Models/weather_model.dart';
 import 'package:weather_app/Widgets/additional_information.dart';
 import 'package:weather_app/Widgets/current_weather.dart';
 import 'package:weather_app/Services/weather_api.dart';
@@ -12,10 +13,10 @@ class HomePageScreen extends StatefulWidget {
 
 class _HomePageScreenState extends State<HomePageScreen> {
   WeatherApi client = WeatherApi();
-  @override
-  void initState() {
-    super.initState();
-    client.getCurrentWeather('lahore');
+  WeatherModel? data;
+
+  Future<void>? getData() async {
+    data = await client.getCurrentWeather('george');
   }
 
   @override
@@ -40,23 +41,37 @@ class _HomePageScreenState extends State<HomePageScreen> {
           ),
         ),
       ),
-      body: Column(
-        children: [
-          currentWeather(Icons.wb_sunny, '25.5', 'Lahore'),
-          const SizedBox(height: 12),
-          const Divider(indent: 50, endIndent: 50, thickness: 2),
-          const SizedBox(height: 12),
-          const Text(
-            "Additional Information",
-            style: TextStyle(
-              fontSize: 23,
-            ),
-          ),
-          const SizedBox(
-            height: 16,
-          ),
-          additionalInformation("6.5", "70%", "1000", "25.5"),
-        ],
+      body: FutureBuilder(
+        future: getData(),
+        builder: (context, snapshot) {
+          if (snapshot.connectionState == ConnectionState.done) {
+            return Column(
+              children: [
+                currentWeather(
+                    Icons.wb_sunny, '${data?.temp}', '${data?.cityName}'),
+                const SizedBox(height: 12),
+                const Divider(indent: 50, endIndent: 50, thickness: 2),
+                const SizedBox(height: 12),
+                const Text(
+                  "Additional Information",
+                  style: TextStyle(
+                    fontSize: 23,
+                  ),
+                ),
+                const SizedBox(
+                  height: 16,
+                ),
+                additionalInformation("${data?.wind}", "${data?.humidity}",
+                    "${data?.pressure}", "${data?.feelsLike}"),
+              ],
+            );
+          } else if (snapshot.connectionState == ConnectionState.waiting) {
+            return const Center(
+              child: CircularProgressIndicator(),
+            );
+          }
+          return Container();
+        },
       ),
     );
   }

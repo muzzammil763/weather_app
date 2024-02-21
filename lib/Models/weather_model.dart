@@ -6,13 +6,14 @@ class WeatherModel {
   int? pressure;
   double? feelsLike;
 
-  WeatherModel(
-      {this.cityName,
-      this.temp,
-      this.wind,
-      this.humidity,
-      this.pressure,
-      this.feelsLike});
+  WeatherModel({
+    this.cityName,
+    this.temp,
+    this.wind,
+    this.humidity,
+    this.pressure,
+    this.feelsLike,
+  });
 
   WeatherModel.fromJson(Map<String, dynamic> json) {
     cityName = json['name'];
