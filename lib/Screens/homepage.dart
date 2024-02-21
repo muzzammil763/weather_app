@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:weather_app/Widgets/additional_information.dart';
 import 'package:weather_app/Widgets/current_weather.dart';
 
 class HomePageScreen extends StatelessWidget {
@@ -40,8 +41,10 @@ class HomePageScreen extends StatelessWidget {
               fontSize: 23,
             ),
           ),
-          //Text("Humidity: 70%"),
-          //Text("Wind Speed: 6.5km/h"),
+          SizedBox(
+            height: 16,
+          ),
+          additionalInformation("6.5", "70%", "1000", "25.5"),
         ],
       ),
     );
