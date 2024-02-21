@@ -16,13 +16,13 @@ class _HomePageScreenState extends State<HomePageScreen> {
   WeatherModel? data;
 
   Future<void>? getData() async {
-    data = await client.getCurrentWeather('george');
+    data = await client.getCurrentWeather('karachi');
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xffffeff6),
+      backgroundColor: const Color(0xffe7ffe6),
       appBar: AppBar(
         leading: IconButton(
           icon: const Icon(
@@ -32,9 +32,9 @@ class _HomePageScreenState extends State<HomePageScreen> {
           onPressed: () {},
         ),
         centerTitle: true,
-        backgroundColor: const Color(0xffffeff6),
+        backgroundColor: const Color(0xffd3ffd2),
         title: const Text(
-          'Weather App',
+          'Weather By Muzamil',
           style: TextStyle(
             fontSize: 18,
             color: Colors.black,
@@ -47,15 +47,19 @@ class _HomePageScreenState extends State<HomePageScreen> {
           if (snapshot.connectionState == ConnectionState.done) {
             return Column(
               children: [
+                const SizedBox(height: 32),
                 currentWeather(
-                    Icons.wb_sunny, '${data?.temp}', '${data?.cityName}'),
+                  Icons.wb_sunny_rounded,
+                  '${data?.temp}',
+                  '${data?.cityName}',
+                ),
                 const SizedBox(height: 12),
-                const Divider(indent: 50, endIndent: 50, thickness: 2),
+                const Divider(indent: 100, endIndent: 100, thickness: 1),
                 const SizedBox(height: 12),
                 const Text(
                   "Additional Information",
                   style: TextStyle(
-                    fontSize: 23,
+                    fontSize: 20,
                   ),
                 ),
                 const SizedBox(
