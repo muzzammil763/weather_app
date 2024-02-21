@@ -41,7 +41,7 @@ class HomePageScreen extends StatelessWidget {
               fontSize: 23,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 16,
           ),
           additionalInformation("6.5", "70%", "1000", "25.5"),
