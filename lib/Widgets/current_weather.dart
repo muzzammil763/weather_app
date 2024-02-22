@@ -18,10 +18,22 @@ Widget currentWeather(IconData icon, String temp, String location) {
             fontSize: 40,
           ),
         ),
-        Text(
-          location,
-          style: const TextStyle(
-            fontSize: 20,
+        Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(16),
+            color: const Color(0xffd3ffd2),
+          ),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(
+              vertical: 16,
+              horizontal: 24,
+            ),
+            child: Text(
+              location,
+              style: const TextStyle(
+                fontSize: 20,
+              ),
+            ),
           ),
         ),
       ],
