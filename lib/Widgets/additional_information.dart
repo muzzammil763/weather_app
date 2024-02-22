@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 Widget additionalInformation(
     String wind, String humidity, String pressure, String feelsLike) {
   return Container(
-    padding: const EdgeInsets.all(16),
+    padding: const EdgeInsets.symmetric(
+      horizontal: 48,
+    ),
     width: double.infinity,
     child: Column(
       children: [
@@ -12,7 +14,7 @@ Widget additionalInformation(
             Expanded(
               child: Container(
                 width: double.infinity,
-                height: 100,
+                height: 150,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(16),
                   color: const Color(0xffd3ffd2),
@@ -20,6 +22,16 @@ Widget additionalInformation(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
+                    SizedBox(
+                      height: 30,
+                      width: 30,
+                      child: Image.asset(
+                        "assets/images/wind.png",
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 4,
+                    ),
                     const Text(
                       "Wind",
                       style: TextStyle(
@@ -43,7 +55,7 @@ Widget additionalInformation(
             Expanded(
               child: Container(
                 width: double.infinity,
-                height: 100,
+                height: 150,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(16),
                   color: const Color(0xffd3ffd2),
@@ -51,6 +63,16 @@ Widget additionalInformation(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
+                    SizedBox(
+                      height: 30,
+                      width: 30,
+                      child: Image.asset(
+                        "assets/images/humidity.png",
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 4,
+                    ),
                     const Text(
                       "Humidity",
                       style: TextStyle(
@@ -78,7 +100,7 @@ Widget additionalInformation(
             Expanded(
               child: Container(
                 width: double.infinity,
-                height: 100,
+                height: 150,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(16),
                   color: const Color(0xffd3ffd2),
@@ -86,6 +108,16 @@ Widget additionalInformation(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
+                    SizedBox(
+                      height: 30,
+                      width: 30,
+                      child: Image.asset(
+                        "assets/images/pressure.png",
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 4,
+                    ),
                     const Text(
                       "Pressure",
                       style: TextStyle(
@@ -109,7 +141,7 @@ Widget additionalInformation(
             Expanded(
               child: Container(
                 width: double.infinity,
-                height: 100,
+                height: 150,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(16),
                   color: const Color(0xffd3ffd2),
@@ -117,6 +149,16 @@ Widget additionalInformation(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
+                    SizedBox(
+                      height: 30,
+                      width: 30,
+                      child: Image.asset(
+                        "assets/images/like.png",
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 4,
+                    ),
                     const Text(
                       "Feels Like",
                       style: TextStyle(

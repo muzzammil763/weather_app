@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:weather_app/Models/weather_model.dart';
 import 'package:weather_app/Widgets/additional_information.dart';
 import 'package:weather_app/Widgets/current_weather.dart';
 import 'package:weather_app/Services/weather_api.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class HomePageScreen extends StatefulWidget {
   const HomePageScreen({super.key});
@@ -56,9 +58,9 @@ class _HomePageScreenState extends State<HomePageScreen> {
                 const SizedBox(height: 12),
                 const Divider(indent: 100, endIndent: 100, thickness: 1),
                 const SizedBox(height: 12),
-                const Text(
+                Text(
                   "Additional Information",
-                  style: TextStyle(
+                  style: GoogleFonts.poppins(
                     fontSize: 20,
                   ),
                 ),
