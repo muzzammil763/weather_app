@@ -16,7 +16,7 @@ Widget additionalInformation(
                 width: double.infinity,
                 height: 150,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(16),
+                  borderRadius: BorderRadius.circular(32),
                   color: const Color(0xffd3ffd2),
                 ),
                 child: Column(
@@ -57,7 +57,7 @@ Widget additionalInformation(
                 width: double.infinity,
                 height: 150,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(16),
+                  borderRadius: BorderRadius.circular(32),
                   color: const Color(0xffd3ffd2),
                 ),
                 child: Column(
@@ -102,7 +102,7 @@ Widget additionalInformation(
                 width: double.infinity,
                 height: 150,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(16),
+                  borderRadius: BorderRadius.circular(32),
                   color: const Color(0xffd3ffd2),
                 ),
                 child: Column(
@@ -143,7 +143,7 @@ Widget additionalInformation(
                 width: double.infinity,
                 height: 150,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(16),
+                  borderRadius: BorderRadius.circular(32),
                   color: const Color(0xffd3ffd2),
                 ),
                 child: Column(
