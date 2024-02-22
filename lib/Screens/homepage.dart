@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:weather_app/Models/weather_model.dart';
@@ -30,13 +31,18 @@ class _HomePageScreenState extends State<HomePageScreen> {
           IconButton(
             onPressed: () {
               Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => const LocationSelecter()));
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const LocationSelecter(),
+                ),
+              );
             },
-            icon: const Icon(
-              Icons.search,
-              color: Colors.black,
+            icon: const Padding(
+              padding: EdgeInsets.only(right: 8),
+              child: Icon(
+                CupertinoIcons.location,
+                color: Colors.black,
+              ),
             ),
           ),
         ],
