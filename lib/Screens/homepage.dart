@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:weather_app/Models/weather_model.dart';
 import 'package:weather_app/Screens/location_selecter.dart';
+import 'package:weather_app/Services/weather_api.dart';
 import 'package:weather_app/Widgets/additional_information.dart';
 import 'package:weather_app/Widgets/current_weather.dart';
-import 'package:weather_app/Services/weather_api.dart';
 
 class HomePageScreen extends StatefulWidget {
   const HomePageScreen({super.key});
@@ -19,7 +19,7 @@ class _HomePageScreenState extends State<HomePageScreen> {
   WeatherModel? data;
 
   Future<void>? getData() async {
-    data = await client.getCurrentWeather('karachi');
+    data = await client.getCurrentWeather('islamabad');
   }
 
   @override
